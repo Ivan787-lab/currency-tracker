@@ -1,0 +1,500 @@
+* {
+  margin: 0;
+  padding: 0;
+  transition: 0.3s all;
+}
+
+@font-face {
+  font-family: "Roboto";
+  src: url(../fonts/Roboto-Regular.ttf);
+}
+@font-face {
+  font-family: "Roboto-Light";
+  src: url(../fonts/Roboto-Light.ttf);
+}
+@font-face {
+  font-family: "Roboto-Bold";
+  src: url(../fonts/Roboto-Bold.ttf);
+}
+$black: #0d1117;
+$white: #c9d1d9;
+
+main {
+  font-family: "Roboto";
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  .main__title {
+    width: 100%;
+    text-align: center;
+  }
+  .main__switcher {
+    left: 90px !important;
+    top: 50px !important;
+  }
+  .main__field {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 125px !important;
+
+    .field__card {
+      padding: 10px;
+      box-sizing: border-box;
+      width: 350px;
+      margin: 15px;
+      height: max-content;
+      border-radius: 12px;
+      cursor: pointer;
+      font-family: "Roboto-Bold";
+      box-shadow: 0 0 6px 1px #c9d1d9;
+      &:hover {
+        transform: scale(1.05);
+      }
+
+      .card__symbol {
+        .card__name {
+          font-family: "Roboto";
+          color: #808080;
+        }
+      }
+
+      .card__price {
+        margin-top: 10px;
+        font-size: 1.3em;
+      }
+      .card__volume {
+        @extend .card__price;
+      }
+      .card__vwap24hr {
+        @extend .card__price;
+      }
+    }
+  }
+}
+@media (max-width: 1440px) {
+    main {
+      .main__switcher {
+        position: absolute;
+        width: 150px;
+        background: #f5f5f5;
+        height: 50px;
+        border-radius: 7px;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        padding: 0 5px;
+        box-sizing: border-box;
+        box-shadow: 0 0 6px 1px #c9d1d9;
+        border-radius: 12px;
+        left: 650px !important;
+        top: 70px;
+  
+        &:hover {
+          transform: scale(1.05);
+        }
+  
+        .main__switcher-circle {
+          border-radius: 50%;
+          width: 40px;
+          height: 40px;
+          display: flex;
+  
+          &::after {
+            border-radius: 50%;
+            width: 40px;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+          }
+        }
+  
+        .main__switcher-circle_dark {
+          background: $black;
+          transform: translateX(0px);
+          &::after {
+            content: "☀️";
+          }
+        }
+  
+        .main__switcher-circle_light {
+          background: $white;
+          transform: translateX(100px);
+  
+          &::after {
+            content: "🌙";
+          }
+        }
+      }
+  
+      .main__field {
+        margin-top: 50px;
+        .field__card {
+          width: 450px;
+          margin: 15px;
+  
+          .card__price {
+            margin-top: 10px;
+            font-size: 1.2em;
+          }
+        }
+      }
+    }
+  }
+
+@media (max-width: 1024px) {
+    main {
+      .main__switcher {
+        position: absolute;
+        width: 150px;
+        background: #f5f5f5;
+        height: 50px;
+        border-radius: 7px;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        padding: 0 5px;
+        box-sizing: border-box;
+        box-shadow: 0 0 6px 1px #c9d1d9;
+        border-radius: 12px;
+        left: 458px !important;
+        top: 70px;
+  
+        &:hover {
+          transform: scale(1.05);
+        }
+  
+        .main__switcher-circle {
+          border-radius: 50%;
+          width: 40px;
+          height: 40px;
+          display: flex;
+  
+          &::after {
+            border-radius: 50%;
+            width: 40px;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+          }
+        }
+  
+        .main__switcher-circle_dark {
+          background: $black;
+          transform: translateX(0px);
+          &::after {
+            content: "☀️";
+          }
+        }
+  
+        .main__switcher-circle_light {
+          background: $white;
+          transform: translateX(100px);
+  
+          &::after {
+            content: "🌙";
+          }
+        }
+      }
+  
+      .main__field {
+        margin-top: 50px;
+        .field__card {
+          width: 450px;
+          margin: 15px;
+  
+          .card__price {
+            margin-top: 10px;
+            font-size: 1.2em;
+          }
+        }
+      }
+    }
+  }
+
+@media (max-width: 768px) {
+    main {
+      .main__switcher {
+        position: absolute;
+        width: 150px;
+        background: #f5f5f5;
+        height: 50px;
+        border-radius: 7px;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        padding: 0 5px;
+        box-sizing: border-box;
+        box-shadow: 0 0 6px 1px #c9d1d9;
+        border-radius: 12px;
+        left: 308px !important;
+        top: 70px;
+  
+        &:hover {
+          transform: scale(1.05);
+        }
+  
+        .main__switcher-circle {
+          border-radius: 50%;
+          width: 40px;
+          height: 40px;
+          display: flex;
+  
+          &::after {
+            border-radius: 50%;
+            width: 40px;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+          }
+        }
+  
+        .main__switcher-circle_dark {
+          background: $black;
+          transform: translateX(0px);
+          &::after {
+            content: "☀️";
+          }
+        }
+  
+        .main__switcher-circle_light {
+          background: $white;
+          transform: translateX(100px);
+  
+          &::after {
+            content: "🌙";
+          }
+        }
+      }
+  
+      .main__field {
+        margin-top: 50px;
+        .field__card {
+          width: 355px;
+          margin: 5px;
+  
+          .card__price {
+            margin-top: 10px;
+            font-size: 1.2em;
+          }
+        }
+      }
+    }
+  }
+@media (max-width: 425px) {
+    main {
+      .main__switcher {
+        position: absolute;
+        width: 150px;
+        background: #f5f5f5;
+        height: 50px;
+        border-radius: 7px;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        padding: 0 5px;
+        box-sizing: border-box;
+        box-shadow: 0 0 6px 1px #c9d1d9;
+        border-radius: 12px;
+        left: 118px !important;
+        top: 70px;
+  
+        &:hover {
+          transform: scale(1.05);
+        }
+  
+        .main__switcher-circle {
+          border-radius: 50%;
+          width: 40px;
+          height: 40px;
+          display: flex;
+  
+          &::after {
+            border-radius: 50%;
+            width: 40px;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+          }
+        }
+  
+        .main__switcher-circle_dark {
+          background: $black;
+          transform: translateX(0px);
+          &::after {
+            content: "☀️";
+          }
+        }
+  
+        .main__switcher-circle_light {
+          background: $white;
+          transform: translateX(100px);
+  
+          &::after {
+            content: "🌙";
+          }
+        }
+      }
+  
+      .main__field {
+        margin-top: 50px;
+        flex-direction: column;
+        .field__card {
+          width: 355px;
+          margin: 15px 0;
+  
+          .card__price {
+            margin-top: 10px;
+            font-size: 1.2em;
+          }
+        }
+      }
+    }
+  }
+@media (max-width: 375px) {
+  main {
+    .main__switcher {
+      position: absolute;
+      width: 150px;
+      background: #f5f5f5;
+      height: 50px;
+      border-radius: 7px;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      padding: 0 5px;
+      box-sizing: border-box;
+      box-shadow: 0 0 6px 1px #c9d1d9;
+      border-radius: 12px;
+      left: 118px !important;
+      top: 70px;
+
+      &:hover {
+        transform: scale(1.05);
+      }
+
+      .main__switcher-circle {
+        border-radius: 50%;
+        width: 40px;
+        height: 40px;
+        display: flex;
+
+        &::after {
+          border-radius: 50%;
+          width: 40px;
+          height: 40px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+        }
+      }
+
+      .main__switcher-circle_dark {
+        background: $black;
+        transform: translateX(0px);
+        &::after {
+          content: "☀️";
+        }
+      }
+
+      .main__switcher-circle_light {
+        background: $white;
+        transform: translateX(100px);
+
+        &::after {
+          content: "🌙";
+        }
+      }
+    }
+
+    .main__field {
+      margin-top: 50px;
+      flex-direction: column;
+      .field__card {
+        width: 355px;
+        margin: 15px 0;
+
+        .card__price {
+          margin-top: 10px;
+          font-size: 1.2em;
+        }
+      }
+    }
+  }
+}
+@media (max-width: 320px) {
+  main {
+    .main__switcher {
+      position: absolute;
+      width: 150px;
+      background: #f5f5f5;
+      height: 50px;
+      border-radius: 7px;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      padding: 0 5px;
+      box-sizing: border-box;
+      box-shadow: 0 0 6px 1px #c9d1d9;
+      border-radius: 12px;
+      left: 90px !important;
+      top: 70px;
+
+      &:hover {
+        transform: scale(1.05);
+      }
+
+      .main__switcher-circle {
+        border-radius: 50%;
+        width: 40px;
+        height: 40px;
+        display: flex;
+
+        &::after {
+          border-radius: 50%;
+          width: 40px;
+          height: 40px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+        }
+      }
+
+      .main__switcher-circle_dark {
+        background: $black;
+        transform: translateX(0px);
+        &::after {
+          content: "☀️";
+        }
+      }
+
+      .main__switcher-circle_light {
+        background: $white;
+        transform: translateX(100px);
+
+        &::after {
+          content: "🌙";
+        }
+      }
+    }
+
+    .main__field {
+      margin-top: 50px;
+      flex-direction: column;
+      .field__card {
+        width: 290px;
+        margin: 15px 0;
+
+        .card__price {
+          margin-top: 10px;
+          font-size: 1.2em;
+        }
+      }
+    }
+  }
+}
